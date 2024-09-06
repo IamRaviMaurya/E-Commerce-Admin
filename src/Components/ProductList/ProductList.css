@@ -1,0 +1,116 @@
+/* Container for the entire product list */
+.product-list {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Heading for the product list */
+  .product-list h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  /* Header for product fields (e.g., Product, Title, Price, etc.) */
+  .product-list-format-name {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr 0.5fr;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 10px 0;
+    border-bottom: 2px solid #ddd;
+  }
+  
+  /* Main container for all product items */
+  .all-product-list {
+    margin-top: 10px;
+  }
+  
+  /* Each product item in the list */
+  .product-list-format-main {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr 0.5fr;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  /* Style for product images */
+  .product-list-icon {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  /* Old Price */
+  .product-list-format-main p:nth-child(3),
+  .product-list-format-main p:nth-child(4) {
+    color: #666;
+    font-size: 1rem;
+  }
+  
+  /* Category text */
+  .product-list-format-main p:nth-child(5) {
+    font-size: 1rem;
+    color: #444;
+  }
+  
+  /* Remove (cross) icon */
+  .product-list-remove-icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+  }
+  
+  .product-list-remove-icon:hover {
+    opacity: 0.7;
+  }
+  
+  /* Ensure text is nicely spaced in the grid */
+  .product-list-format p {
+    margin: 0;
+    padding: 0 10px;
+    font-size: 1rem;
+  }
+  
+  /* Add some spacing between rows */
+  .product-list-format-main {
+    padding: 10px 0;
+  }
+  
+  /* Responsive design for smaller screens */
+  @media screen and (max-width: 768px) {
+    /* Stack items vertically on small screens */
+    .product-list-format-name,
+    .product-list-format-main {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  
+    /* Adjust product image size for small screens */
+    .product-list-icon {
+      width: 40px;
+      height: 40px;
+    }
+  
+    /* Remove icon becomes smaller */
+    .product-list-remove-icon {
+      width: 16px;
+      height: 16px;
+    }
+  
+    /* Hide price and category fields for smaller screens */
+    .product-list-format-name p:nth-child(3),
+    .product-list-format-name p:nth-child(4),
+    .product-list-format-name p:nth-child(5),
+    .product-list-format-main p:nth-child(3),
+    .product-list-format-main p:nth-child(4),
+    .product-list-format-main p:nth-child(5) {
+      display: none;
+    }
+  }
+  
